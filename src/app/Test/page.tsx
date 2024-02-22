@@ -42,7 +42,7 @@ function Test() {
 				})}
 			</div>
 
-			<div className="flex flex-col-reverse gap-4 ">
+			<div className="flex flex-col-reverse md:flex-row gap-4 ">
 				<div className="h-32">
 					<div className="rounded-full h-32 w-32 bg-black"></div>
 				</div>
