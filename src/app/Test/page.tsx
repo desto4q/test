@@ -24,15 +24,23 @@ function Test() {
 						{options.map((item, index) => {
 							if (index > 2) {
 								return (
-									<div className="hidden md:block" key={index}>
+									<div
+										className=" rounded-lg hidden md:block active:bg-black active:text-white focus-within:bg-black focus-within:text-white"
+										tabIndex={1}
+										key={index}
+									>
 										<TabsTrigger value={item}>{item}</TabsTrigger>
 									</div>
 								);
 							}
 							return (
-								<TabsTrigger key={index} value={item}>
-									{item}
-								</TabsTrigger>
+								<div
+									className="rounded-lg active:bg-black active:text-white focus-within:bg-black focus-within:text-white"
+									tabIndex={1}
+									key={index}
+								>
+									<TabsTrigger value={item}>{item}</TabsTrigger>
+								</div>
 							);
 						})}
 					</TabsList>
