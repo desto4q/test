@@ -21,7 +21,7 @@ function Test() {
 						return (
 							<div
 								key={index}
-								className="capitalize bg-white p-2 rounded-md shadow-xl"
+								className="whitespace-nowrap text-xs md:text-lg  capitalize bg-white p-2 rounded-md shadow-xl"
 							>
 								{item}
 							</div>
@@ -29,13 +29,19 @@ function Test() {
 					}
 					if (index > 2) {
 						return (
-							<div key={index} className="hidden md:block  text-gray-600 p-2">
+							<div
+								key={index}
+								className=" whitespace-nowrap text-xs md:text-lg  hidden md:block  text-gray-600 p-2"
+							>
 								{item}
 							</div>
 						);
 					}
 					return (
-						<div key={index} className="capitalize text-gray-600 p-2">
+						<div
+							key={index}
+							className=" whitespace-nowrap text-xs  md:text-lg capitalize text-gray-600 p-2"
+						>
 							{item}
 						</div>
 					);
