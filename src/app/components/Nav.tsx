@@ -9,14 +9,21 @@ import {
 	NavigationMenuTrigger,
 	NavigationMenuViewport,
 } from "./NavMenu";
+import { Squash as Hamburger } from "hamburger-react";
 import { Input } from "./Input";
 
 let links = ["dashboard", "messages", "campaigns", "studio"];
 function Nav() {
 	return (
 		<nav className="flex justify-center h-16 items-center">
-			<div className="container bg-red-200 flex gap-6">
-				<div className="rounded-full bg-blue-300 h-12 w-12"></div>
+			<div className="container flex gap-6 items-center">
+				<div className="flex items-center justify-center lg:hidden">
+					<Hamburger />
+				</div>
+				<div className="h-full w-100">
+					<img src="logo.svg" alt="" />
+				</div>
+
 				<NavigationMenu>
 					<NavigationMenuList>
 						<NavigationMenuItem>
@@ -30,7 +37,7 @@ function Nav() {
 						</NavigationMenuItem>
 					</NavigationMenuList>
 				</NavigationMenu>
-				<div className="flex gap-6 items-center mx-auto">
+				<div className="hidden md:flex gap-6 items-center mx-auto">
 					{links.map((item, index) => {
 						return (
 							<a
@@ -43,9 +50,15 @@ function Nav() {
 						);
 					})}
 				</div>
-				<div className="flex gap-4 items-center">
-                    
+				<div className="md:flex gap-4 items-center hidden">
+					<img src="notification-4-line.svg" alt="" />
+					<img src="gift-2-line.svg" alt="" />
+
 					<Input placeholder="search..."></Input>
+				</div>
+
+				<div className="block md:hidden  ml-auto">
+					<img src="search-2-line.svg" alt="" />
 				</div>
 			</div>
 		</nav>
