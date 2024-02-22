@@ -16,12 +16,19 @@ function Test() {
 	return (
 		<>
 			<Nav />
-			<div className="container p-4 md:p-2 mx-auto gap-12 flex flex-col mt-10">
+			<div className="container p-4 md:p-2 mx-auto gap-8 flex flex-col mt-10">
 				<h1 className="text-4xl font-bold"> Settings</h1>
 				<Tabs>
 					<TabsList>
 						{" "}
 						{options.map((item, index) => {
+							if (index > 2) {
+								return (
+									<div className="hidden md:block" key={index}>
+										<TabsTrigger value={item}>{item}</TabsTrigger>
+									</div>
+								);
+							}
 							return (
 								<TabsTrigger key={index} value={item}>
 									{item}
@@ -32,7 +39,9 @@ function Test() {
 					<TabsContent value="Your Profile">
 						<div className="flex flex-col-reverse  gap-6 lg:flex-row lg:gap-2 items-center">
 							<div className="flex  gap-4 items-center ">
-								<div className="h-32 w-32 bg-black rounded-full"></div>
+								<div className="h-32 w-32 bg-black rounded-full flex items-center justify-center">
+									<img src="vector.png" alt="" />
+								</div>
 								<div className="flex flex-col h-fit gap-4">
 									<div className="flex gap-4">
 										<button className="p-2 bg-red-700  shadow shadow-red-200 text-white rounded-lg">
@@ -42,7 +51,9 @@ function Test() {
 											Change Photo
 										</button>
 									</div>
-									<p>or drag and drop (SVG, PNG, JPG)</p>
+									<p className="text-gray-500">
+										or drag and drop (SVG, PNG, JPG)
+									</p>
 								</div>
 							</div>
 							<div className="flex gap-4 lg:ml-auto h-fit my-6 lg:my-0 w-full lg:w-fit">
@@ -86,15 +97,15 @@ function Test() {
 						</ToggleGroup>
 					</div>
 				</div>
-				<div className="flex-col md:flex">
+				<div className="flex-col md:flex gap-2">
 					<label>Company description</label>
 					<Input></Input>
 				</div>
-				<div className="flex-col md:flex">
+				<div className="flex-col md:flex gap-2">
 					<label> What are your company goals</label>
 					<Input></Input>
 				</div>
-				<div className="flex-col md:flex">
+				<div className="flex-col md:flex gap-2">
 					<label>Headquarters</label>
 					<Input></Input>
 				</div>
