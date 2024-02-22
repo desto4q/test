@@ -21,7 +21,7 @@ function Test() {
 						return (
 							<div
 								key={index}
-								className="whitespace-nowrap text-xs md:text-lg  capitalize bg-white p-2 rounded-md shadow-xl"
+								className="cursor-pointer whitespace-nowrap text-xs md:text-lg  capitalize bg-white p-2 rounded-md shadow-xl"
 							>
 								{item}
 							</div>
@@ -31,7 +31,7 @@ function Test() {
 						return (
 							<div
 								key={index}
-								className=" whitespace-nowrap text-xs md:text-lg  hidden md:block  text-gray-600 p-2"
+								className="cursor-pointer whitespace-nowrap text-xs md:text-lg  hidden md:block  text-gray-600 p-2"
 							>
 								{item}
 							</div>
@@ -40,7 +40,7 @@ function Test() {
 					return (
 						<div
 							key={index}
-							className=" whitespace-nowrap text-xs  md:text-lg capitalize text-gray-600 p-2"
+							className="cursor-pointer whitespace-nowrap text-xs  md:text-lg capitalize text-gray-600 p-2"
 						>
 							{item}
 						</div>
