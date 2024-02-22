@@ -19,13 +19,13 @@ function Test() {
 			<div className="container p-4 md:p-2 mx-auto gap-8 flex flex-col mt-10">
 				<h1 className="text-4xl font-bold"> Settings</h1>
 				<Tabs>
-					<TabsList>
+					<TabsList className="">
 						{" "}
 						{options.map((item, index) => {
 							if (index > 2) {
 								return (
 									<div
-										className=" rounded-lg hidden md:block active:bg-black active:text-white focus-within:bg-black focus-within:text-white"
+										className=" rounded-lg hidden md:block focus-within:shadow-lg focus-within:bg-white"
 										tabIndex={1}
 										key={index}
 									>
@@ -35,7 +35,7 @@ function Test() {
 							}
 							return (
 								<div
-									className="rounded-lg active:bg-black active:text-white focus-within:bg-black focus-within:text-white"
+									className="rounded-lg focus-within:shadow-lg focus-within:bg-white "
 									tabIndex={1}
 									key={index}
 								>
@@ -45,7 +45,7 @@ function Test() {
 						})}
 					</TabsList>
 					<TabsContent value="Your Profile">
-						<div className="flex flex-col-reverse  gap-6 lg:flex-row lg:gap-2 items-center">
+						<div className="flex flex-col-reverse  gap-6 lg:flex-row lg:gap-2 items-center ">
 							<div className="flex  gap-4 items-center ">
 								<div className="h-32 w-32 bg-black rounded-full flex items-center justify-center">
 									<img src="vector.PNG" alt="" />
@@ -76,7 +76,7 @@ function Test() {
 						</div>
 					</TabsContent>
 				</Tabs>
-				<div className="grid  grid-cols-1 gap-6 gap-cols-6 grid-rows-2 md:grid-cols-2">
+				<div className="grid   grid-cols-1 gap-6 gap-cols-6 grid-rows-2 md:grid-cols-2">
 					<div className="flex flex-col gap-2">
 						<label>Company's Name</label>
 						<Input type="name" id="name" placeholder="Company Name" />
