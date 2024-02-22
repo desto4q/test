@@ -46,7 +46,7 @@ function Test() {
 					</TabsList>
 					<TabsContent value="Your Profile">
 						<div className="flex flex-col-reverse  gap-6 lg:flex-row lg:gap-2 items-center ">
-							<div className="flex  gap-4 items-center justify-between md:justify-start w-full md:w-auto">
+							<div className="flex  gap-24 md:g-4 items-center md:justify-start w-full md:w-auto">
 								<div className="h-32 w-32  bg-black rounded-full flex items-center justify-center">
 									<img src="https://i.ibb.co/qdxz5wQ/Vector.png" alt="" />
 								</div>
