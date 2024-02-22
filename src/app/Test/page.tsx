@@ -18,7 +18,7 @@ function Test() {
 			<Nav />
 			<div className="container p-4 md:p-2 mx-auto gap-8 flex flex-col mt-10">
 				<h1 className="text-4xl font-bold"> Settings</h1>
-				<Tabs>
+				<Tabs defaultValue={"Your Profile"}>
 					<TabsList className="">
 						{" "}
 						{options.map((item, index) => {
