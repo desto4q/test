@@ -48,7 +48,7 @@ function Test() {
 						<div className="flex flex-col-reverse  gap-6 lg:flex-row lg:gap-2 items-center ">
 							<div className="flex  gap-4 items-center ">
 								<div className="h-32 w-32 bg-black rounded-full flex items-center justify-center">
-									<img src="vector.PNG" alt="" />
+									<img src="https://i.ibb.co/qdxz5wQ/Vector.png" alt="" />
 								</div>
 								<div className="flex flex-col h-fit gap-4">
 									<div className="flex gap-4">
